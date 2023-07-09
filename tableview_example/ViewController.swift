@@ -12,18 +12,29 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var movies : [Movies] = [Movies]()
     
+    var searchList : [Movies] = [Movies]()
+    
+    var search  = false
+    
+    
+    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         
         
-        
+       
         tableView.delegate = self
         tableView.dataSource = self
+        
+        searchBar.delegate = self
+        
         
        let hizliveofeli = Movies(movieName: "Hızlı ve Öfkeli 10 ",movieDate: "2023",movieImage: "hizliveofkeli")
         let oppenHeimer = Movies(movieName: "Oppenheimer" , movieDate: "2023",movieImage: "oppen")
@@ -61,7 +72,16 @@ class ViewController: UIViewController {
 
 extension ViewController : UITableViewDelegate , UITableViewDataSource  {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies.count
+      
+        
+        
+        if search {
+            return searchList.count
+            
+            
+        } else {
+            return movies.count
+        }
         
     }
     
@@ -74,9 +94,22 @@ extension ViewController : UITableViewDelegate , UITableViewDataSource  {
         
        let movies = movies[indexPath.row]
         
-        cell.nameText.text = movies.movieName
-        cell.directorText.text = "Yayınlanma Yılı : \(movies.movieDate!) "
-        cell.pictureView.image = UIImage(named: movies.movieImage!)
+       
+        
+        
+        if search {
+            
+            cell.nameText.text = searchList[indexPath.row].movieName
+            cell.directorText.text = searchList[indexPath.row].movieDate
+            cell.pictureView.image = UIImage(named: searchList[indexPath.row].movieImage!)
+            
+        } else {
+            cell.nameText.text = movies.movieName
+            cell.directorText.text = "Yayınlanma Yılı : \(movies.movieDate!) "
+            cell.pictureView.image = UIImage(named: movies.movieImage!)
+            
+            
+        }
          
         
         
@@ -101,6 +134,39 @@ extension ViewController : UITableViewDelegate , UITableViewDataSource  {
     
     
     
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
+extension ViewController : UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    
+        
+        
+        if searchText == "" {
+            search = false
+        } else {
+            search = true
+            searchList = movies.filter({$0.movieName!.lowercased().contains(searchText.lowercased())})
+        }
+        
+        
+      
+   
+        
+        
+        //data yeniliyor. her çalıştığında extension metotları tekrardan çalışır
+        tableView.reloadData()
+    }
     
 }
 

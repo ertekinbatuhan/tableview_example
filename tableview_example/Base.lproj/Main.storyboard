@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j3R-i5-Ku6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tez-BA-Uxn">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="115" width="393" height="747"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="movieCell" id="yst-Tk-wGl" customClass="TableViewCell" customModule="tableview_example" customModuleProvider="target">
@@ -28,15 +29,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hizliveofkeli" translatesAutoresizingMaskIntoConstraints="NO" id="CEd-Z8-xpd">
-                                                    <rect key="frame" x="8" y="0.0" width="100" height="150"/>
+                                                    <rect key="frame" x="4" y="0.0" width="100" height="150"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="w3D-us-AMv"/>
+                                                        <constraint firstAttribute="width" constant="100" id="deY-eu-Brl"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZW-cl-86a">
-                                                    <rect key="frame" x="149" y="11" width="52" height="21"/>
+                                                    <rect key="frame" x="145" y="11" width="52" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="mTK-ZA-qE6"/>
+                                                        <constraint firstAttribute="height" constant="21" id="qSH-eq-way"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
@@ -44,21 +45,21 @@
                                                     <color key="shadowColor" systemColor="linkColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NI2-L0-E7O">
-                                                    <rect key="frame" x="149" y="102" width="48" height="37"/>
+                                                    <rect key="frame" x="145" y="102" width="48" height="37"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="CEd-Z8-xpd" firstAttribute="leading" secondItem="gA6-Ix-JOb" secondAttribute="leadingMargin" constant="-12" id="14r-dh-D0j"/>
-                                                <constraint firstItem="NI2-L0-E7O" firstAttribute="bottom" secondItem="gA6-Ix-JOb" secondAttribute="bottomMargin" id="1NF-Qk-pcP"/>
-                                                <constraint firstItem="CEd-Z8-xpd" firstAttribute="top" secondItem="gA6-Ix-JOb" secondAttribute="topMargin" constant="-11" id="6Qw-Em-eBf"/>
-                                                <constraint firstItem="CEd-Z8-xpd" firstAttribute="centerY" secondItem="gA6-Ix-JOb" secondAttribute="centerY" id="8yQ-w2-4nP"/>
-                                                <constraint firstItem="UZW-cl-86a" firstAttribute="leading" secondItem="NI2-L0-E7O" secondAttribute="leading" id="Nfc-Ok-sLb"/>
-                                                <constraint firstItem="UZW-cl-86a" firstAttribute="top" secondItem="gA6-Ix-JOb" secondAttribute="topMargin" id="Xe9-RX-ITn"/>
-                                                <constraint firstItem="NI2-L0-E7O" firstAttribute="top" secondItem="UZW-cl-86a" secondAttribute="bottom" constant="70" id="fcp-qV-AZf"/>
-                                                <constraint firstItem="UZW-cl-86a" firstAttribute="leading" secondItem="CEd-Z8-xpd" secondAttribute="trailing" constant="41" id="irE-dm-Unq"/>
+                                                <constraint firstItem="UZW-cl-86a" firstAttribute="top" secondItem="gA6-Ix-JOb" secondAttribute="topMargin" id="0zd-OG-ZKy"/>
+                                                <constraint firstItem="NI2-L0-E7O" firstAttribute="top" secondItem="UZW-cl-86a" secondAttribute="bottom" constant="70" id="BEh-jC-jOa"/>
+                                                <constraint firstItem="CEd-Z8-xpd" firstAttribute="centerY" secondItem="gA6-Ix-JOb" secondAttribute="centerY" id="PSN-Zi-psT"/>
+                                                <constraint firstItem="NI2-L0-E7O" firstAttribute="bottom" secondItem="gA6-Ix-JOb" secondAttribute="bottomMargin" id="RSz-o4-4NL"/>
+                                                <constraint firstItem="UZW-cl-86a" firstAttribute="leading" secondItem="NI2-L0-E7O" secondAttribute="leading" id="eS6-o8-6ib"/>
+                                                <constraint firstItem="CEd-Z8-xpd" firstAttribute="leading" secondItem="gA6-Ix-JOb" secondAttribute="leadingMargin" constant="-16" id="h7r-tr-IvY"/>
+                                                <constraint firstItem="CEd-Z8-xpd" firstAttribute="top" secondItem="gA6-Ix-JOb" secondAttribute="topMargin" constant="-11" id="oE1-53-bUk"/>
+                                                <constraint firstItem="UZW-cl-86a" firstAttribute="leading" secondItem="CEd-Z8-xpd" secondAttribute="trailing" constant="41" id="zq3-uv-1Tk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -69,46 +70,44 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="7cH-bv-Mzf">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="EIF-6a-l3K"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tez-BA-Uxn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HpB-tM-HZT"/>
-                            <constraint firstItem="tez-BA-Uxn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NU3-7o-LtV"/>
-                            <constraint firstItem="tez-BA-Uxn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jDT-80-KXi"/>
-                            <constraint firstItem="tez-BA-Uxn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oP8-BC-K1e"/>
+                            <constraint firstItem="tez-BA-Uxn" firstAttribute="top" secondItem="7cH-bv-Mzf" secondAttribute="bottom" id="9qP-mB-nr1"/>
+                            <constraint firstItem="7cH-bv-Mzf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Aa7-u4-DJN"/>
+                            <constraint firstItem="7cH-bv-Mzf" firstAttribute="leading" secondItem="tez-BA-Uxn" secondAttribute="leading" id="Bs0-tR-E9Q"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="tez-BA-Uxn" secondAttribute="bottom" constant="-44" id="EW9-mi-Rnz"/>
+                            <constraint firstItem="7cH-bv-Mzf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sf4-Q2-txR"/>
+                            <constraint firstItem="7cH-bv-Mzf" firstAttribute="trailing" secondItem="tez-BA-Uxn" secondAttribute="trailing" id="jU4-EW-UWG"/>
+                            <constraint firstItem="7cH-bv-Mzf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oy8-SP-fqu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Filmler" id="aKt-Gm-z5P"/>
                     <connections>
+                        <outlet property="searchBar" destination="7cH-bv-Mzf" id="o5r-Dd-h89"/>
                         <outlet property="tableView" destination="tez-BA-Uxn" id="2BO-Oj-4Uk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1043.5114503816794" y="3.5211267605633805"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="rqh-5x-q00">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j3R-i5-Ku6" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Bu-ao-vVC">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Kw0-eM-W50"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VMV-LE-0fc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="116.79389312977099" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1970.2290076335878" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
         <image name="hizliveofkeli" width="310" height="420"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
