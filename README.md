@@ -1,6 +1,6 @@
-TableView konusunu pekiştirmek için kolay bir filmler  tasarımı yaptım.
+TableView konusunu pekiştirmek için basit bir filmler  tasarımı yaptım.
 
 
 
 
-![Simulator Screenshot - iPhone 14 Pro - 2023-07-08 at 21 04 04](https://github.com/ertekinbatuhan/tableview_example/assets/101355515/0c21b769-bc5b-4159-97ab-7a66cc52587e)
+![Simulator Screenshot - iPhone 14 Pro - 2023-07-09 at 18 58 36](https://github.com/ertekinbatuhan/tableview_example/assets/101355515/3df37c2b-dfd2-48b9-85b7-c1f070b076f8)
