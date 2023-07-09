@@ -100,7 +100,7 @@ extension ViewController : UITableViewDelegate , UITableViewDataSource  {
         if search {
             
             cell.nameText.text = searchList[indexPath.row].movieName
-            cell.directorText.text = searchList[indexPath.row].movieDate
+            cell.directorText.text = "Yayınlanma Yılı : \(searchList[indexPath.row].movieDate!)"
             cell.pictureView.image = UIImage(named: searchList[indexPath.row].movieImage!)
             
         } else {
